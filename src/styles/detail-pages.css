@@ -1,0 +1,171 @@
+@media screen and (max-width: 840px) {
+    #detail_page {
+        height: 40px;
+    }
+    #button_favorite {
+        padding: 40px 35px 0 35px;
+    }
+}
+
+@media screen and (min-width: 840px) {
+    #detail_page {
+        height: 103px;
+    }
+
+    #button_favorite {
+        padding: 80px 35px 0 35px;
+        position: fixed;
+    }
+    
+    .posisi_button {
+        display: flex; 
+        justify-content: end;
+    }
+
+    .body_resto {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 0px 30px 0 30px;
+        margin: 0 auto;
+    }
+    .image_resto {
+        max-width: 600px;
+    }
+    .description_resto .name_resto {
+        margin-bottom: 5%;
+    }
+    .review_resto {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    #user_review {
+        grid-template-columns: repeat(2, 1fr)  
+    }
+}
+
+@media screen and (min-width: 620px) {
+    .body_resto {
+        padding: 10px 20px 20px 20px;
+        margin: 0px 0;
+    }
+    .description_resto .name_resto {
+        margin-bottom: 4px;
+    }
+}
+
+@media screen and (max-width: 620px) {
+    #button_favorite {
+        padding: 40px 30px 0 30px;
+        display: block;
+    }
+    .body_resto {
+        grid-template-columns: repeat(1, 1fr);
+        padding: 5px 10px 20px 10px;
+        margin: 0 auto;
+    }
+    .review_resto {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    #user_review {
+        grid-template-columns: repeat(1, 1fr)  
+    }
+}
+
+.button-area {
+    height: 44px;
+}
+
+#detail_page {
+    width: 100%;
+    background-color: #FFD1D1;
+}
+
+.body_resto {
+    display: grid;
+    width: 100%;
+}
+
+.description_resto {
+    font-size: 14px;
+    padding: 0 15px;
+    line-height: 1.6;
+    grid-template-column: repeat(4, 10px);
+}
+
+.description_resto .name_resto {
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.image_resto {
+    width: 100%;
+    padding: 10px 10px 10px 0px;
+    border-radius: 60px;
+}
+
+.description {
+    padding: 0 20px 0 20px;
+}
+
+.menu {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3px;
+    margin-top: 10px;
+}
+
+.makanan {
+    border: 1px dotted black;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.review_resto {
+    display: grid;
+    border-top: 2px dotted black; 
+}
+
+#user_review {
+    padding: 15px;
+    margin: 15px;
+    display: grid;
+    gap: 10px; 
+}
+
+#user_review .user {
+    margin: 5px;
+    padding: 2px;
+}
+
+.description_riview {
+    padding: 5px;
+    line-height: 1.7;
+}
+
+.body_review {
+    padding: 3px;
+    border-radius: 10px;
+    border-top: 1px solid black;
+    overflow-x: auto;
+}
+
+#user_review .user h4 {
+    font-size: 15px;
+}
+
+
+button {
+    height: 100%;
+}
+
+.user-info p {
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.not_connection {
+    font-weight: 800;
+    margin-top: 20px;
+    font-size: 40px;
+    justify-content: center;
+    display: flex;
+    padding: 40px;
+}

@@ -1,0 +1,27 @@
+
+.games {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.game {
+  padding-top: 16px;
+  margin: 0 auto;
+}
+
+.games > .game img {
+  width: 100%;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 1024px) {
+  .games {
+      width: 100%;
+    }
+    .game {
+      margin: 0 auto;
+      padding: 0px;
+    }
+}
+
+

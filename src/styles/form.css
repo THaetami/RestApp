@@ -1,0 +1,75 @@
+.wrapper{
+  width: 100%;
+  background: #fff;
+  border-radius: 5px;
+}
+.wrapper #form_review{
+  margin: 30px 30px;
+}
+#form_review .dbl-field{
+  margin-bottom: 10px;
+  justify-content: space-between;
+}
+.dbl-field .field{
+  height: 50px;
+  width: 100%;
+}
+#form_review .field input,
+#form_review .message textarea{
+  width: 100%;
+  height: 100%;
+  outline: none;
+  padding: 0 18px 0 48px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+.field input:focus,
+.message textarea:focus{
+  padding-left: 47px;
+  border: 2px solid #0D6EFD;
+}
+.field input:focus ~ i,
+.message textarea:focus ~ i{
+  color: #0D6EFD;
+}
+#form_review .message textarea{
+  min-height: 90px;
+  max-height: 150px;
+  width: 100%;
+  padding: 15px 20px 0 48px;
+}
+#form_review .message textarea::-webkit-scrollbar{
+  width: 0px;
+}
+.message textarea:focus{
+  padding-top: 14px;
+}
+#form_review .button-area{
+  margin: 8px 0;
+  display: flex;
+  align-items: center;
+}
+.button-area button{
+  color: #fff;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 13px 25px;
+  background: #0D6EFD;
+  transition: background 0.3s ease;
+}
+.button-area button:hover{
+  background: #025ce3;
+}
+.button-area span{
+  font-size: 17px;
+  margin-left: 30px;
+  display: none;
+}
+
+button {
+  width: 100%;
+}
