@@ -1,3 +1,2 @@
-# RestApp
-Progressive Website Aplication
-link website: https://wikirest.netlify.app/
+# Progressive Website Aplication
+link = https://wikirest.netlify.app/
