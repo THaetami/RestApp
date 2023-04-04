@@ -8,7 +8,6 @@ const FavoriteRestaurantArray = {
       return
     }
 
-    // eslint-disable-next-line eqeqeq
     return favoriteRestaurants.find((restaurant) => restaurant.id == id)
   },
 
@@ -30,7 +29,6 @@ const FavoriteRestaurantArray = {
   },
 
   deleteRestaurant (id) {
-    // eslint-disable-next-line eqeqeq, no-const-assign
     favoriteRestaurants = favoriteRestaurants.filter((restaurant) => restaurant.id != id)
   },
 
@@ -42,13 +40,11 @@ const FavoriteRestaurantArray = {
       const loweredCaseQuery = query.toLowerCase()
       const jammedQuery = loweredCaseQuery.replace(/\s/g, '')
 
-      // eslint-disable-next-line eqeqeq
       return jammedRestaurantName.indexOf(jammedQuery) !== -1
     })
   }
 }
 
-// eslint-disable-next-line no-undef
 describe('Favorite Restaurant Array Contract Test Implementation', () => {
   // eslint-disable-next-line no-return-assign, no-const-assign, no-undef
   afterEach(() => favoriteRestaurants = [])
