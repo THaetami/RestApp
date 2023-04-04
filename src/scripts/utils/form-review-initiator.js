@@ -4,7 +4,14 @@ import { createRestauranUserRiviewTemplate } from '../view/templates/template-cr
 const formReviewInitiator = {
   init ({ nameReviewer, reviewer, buttonReviewerContainer, id, restaurantUserReviewContainer }) {
     buttonReviewerContainer.addEventListener('click', async () => {
-      this._addReview(nameReviewer, reviewer, id, restaurantUserReviewContainer)
+      if (nameReviewer.value.trim() === '') {
+        alert('nama tidak boleh kosong!')
+      }
+      else if (reviewer.value.trim() === '') {
+        alert('message tidak boleh kosong!')
+      } else {
+        this._addReview(nameReviewer, reviewer, id, restaurantUserReviewContainer)
+      }
     })
   },
 
@@ -14,6 +21,7 @@ const formReviewInitiator = {
       name: nameReviewer.value,
       review: review.value
     }
+
     const response = await RestaurantDbSource.addReview({ body })
     if (response.error === false) {
       review.value = ''
