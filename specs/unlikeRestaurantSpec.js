@@ -27,7 +27,7 @@ describe('Unlike A Restaurant', () => {
   })
 
   // eslint-disable-next-line no-undef
-  it('should not display like widget when the movie has been liked', async () => {
+  it('should not display like widget when the restaurant has been liked', async () => {
     await TestFactories.createLikeButtonPresentWithRestaurant({ id: 1 })
 
     // eslint-disable-next-line no-undef

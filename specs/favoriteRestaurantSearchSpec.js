@@ -53,7 +53,7 @@ describe('Searching Restaurant', () => {
     })
 
     // eslint-disable-next-line no-undef
-    it('should show the movie found by favorite Restaurant', (done) => {
+    it('should show the restaurant found by favorite Restaurant', (done) => {
       document.getElementById('cards').addEventListener('restaurantsFavorite:updated', () => {
         // eslint-disable-next-line no-undef
         expect(document.querySelectorAll('.card').length).toEqual(3)

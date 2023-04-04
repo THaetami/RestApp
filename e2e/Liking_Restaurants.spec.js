@@ -14,7 +14,7 @@ Scenario('showing empty liked restaurants', ({ I }) => {
 })
 
 // eslint-disable-next-line no-undef
-Scenario('liking one movie', async ({ I }) => {
+Scenario('liking one restaurant', async ({ I }) => {
   I.see('Tidak ada restaurants untuk ditampilkan', '.resto_not_found')
 
   I.amOnPage('/')
@@ -34,6 +34,39 @@ Scenario('liking one movie', async ({ I }) => {
   const LikedRestaurantName = await I.grabTextFrom('.name_resto')
 
   assert.strictEqual(firstRestaurantName, LikedRestaurantName)
+})
+
+// eslint-disable-next-line no-undef
+Scenario('Unliking one restaurant', async ({ I }) => {
+  I.see('Tidak ada restaurants untuk ditampilkan', '.resto_not_found')
+
+  I.amOnPage('/')
+
+  I.seeElement('.name_resto')
+
+  // eslint-disable-next-line no-undef
+  const firstRestaurant = locate('.name_resto').first()
+  const firstRestaurantName = await I.grabTextFrom(firstRestaurant)
+
+  I.click(firstRestaurant)
+
+  I.seeElement('#likeRestaurantButton')
+  I.click('#likeRestaurantButton')
+
+  I.amOnPage('/#/favorite')
+  I.seeElement('.card')
+  const LikedRestaurantName = await I.grabTextFrom('.name_resto')
+
+  assert.strictEqual(firstRestaurantName, LikedRestaurantName)
+
+  I.click('.card')
+
+  I.seeElement('#likeRestaurantButton')
+  I.click('#likeRestaurantButton')
+
+  I.amOnPage('/#/favorite')
+
+  I.see('Tidak ada restaurants untuk ditampilkan', '.resto_not_found')
 })
 
 // eslint-disable-next-line no-undef

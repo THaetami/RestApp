@@ -13,7 +13,7 @@ const itsActsFavoriteRestaurantModel = (favoriteRestaurant) => {
   })
 
   // eslint-disable-next-line no-undef
-  it('should refuse a movie from being added if it does not have the correct property', async () => {
+  it('should refuse a restaurant from being added if it does not have the correct property', async () => {
     favoriteRestaurant.putRestaurant({ aProperty: 'property' })
 
     // eslint-disable-next-line no-undef
@@ -50,7 +50,7 @@ const itsActsFavoriteRestaurantModel = (favoriteRestaurant) => {
   })
 
   // eslint-disable-next-line no-undef
-  it('should handle request to remove a movie even though the movie has not been added', async () => {
+  it('should handle request to remove a restaurant even though the restaurant has not been added', async () => {
     favoriteRestaurant.putRestaurant({ id: 1 })
     favoriteRestaurant.putRestaurant({ id: 2 })
     favoriteRestaurant.putRestaurant({ id: 3 })

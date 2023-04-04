@@ -11,5 +11,8 @@
         "ecmaVersion": "latest"
     },
     "rules": {
+        "eqeqeq": 0,
+        "no-undef": 0,
+        "brace-style": 0
     }
 }
